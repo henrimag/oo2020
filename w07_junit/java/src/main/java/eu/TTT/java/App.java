@@ -1,28 +1,46 @@
 package eu.TTT.java;
-
 import java.util.Scanner;
 
-/**
- * Hello world!
- *
- */
-public class App {
-    private String name;
+interface TicTacToe {
+
+
+
+    public String getName();
+
+    void Play();
+
+    void PrintBoard();
+
+   
+
+}
+
+class Game {
+
+}
+public class App implements TicTacToe {
+
+   
+    
+    public String name;
     public static int row, column;
+    public static char turn = 'X';
     public static Scanner scan = new Scanner(System.in);
     public static char[][] board = new char[3][3];
-    public static char turn = 'X';
-
+    
     public static void main(String[] args) {
+
+        TicTacToe game = new App();
+
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 board[i][j] = '_';
             }
         }
-        Play();
+        game.Play();
     }
 
-    public static void Play() {
+    public void Play() {
         boolean playing = true;
         while (playing) {
             System.out.println("Please enter a row and column: ");
@@ -41,7 +59,7 @@ public class App {
         }
     }
 
-    public static void PrintBoard() {
+    public void PrintBoard() {
         for (int i = 0; i < 3; i++) {
             System.out.println();
             for (int j = 0; j < 3; j++) {
@@ -52,7 +70,7 @@ public class App {
         }
     }
 
-    public static boolean GameOver(int rMove, int cMove) {
+    public boolean GameOver(int rMove, int cMove) {
         // Check perpendicular victory
         if (board[0][cMove] == board[1][cMove] && board[0][cMove] == board[2][cMove])
             return true;
@@ -66,16 +84,19 @@ public class App {
         return false;
     }
 
+    public int maxValue(int a, int b) {
+        return a > b ? a : b;
+    }
+        
     public App(String name) {
         this.name = name;
     }
 
+    public App() {
+    }
+
     public String getName() {
         return this.name;
-    }
-    
-    public int maxValue(int a, int b){
-        return a > b ? a : b;
     }
 
 }
