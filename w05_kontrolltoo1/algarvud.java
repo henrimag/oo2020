@@ -16,6 +16,8 @@ lisaNumbrid();
 algarvRuut();
 algarvL6pp();
 
+// Kontrollib kas kasutaja poolt sisestatud arv on algarv.
+
 if (onAlg(num)) {
     System.out.println(num + " on algarv.");
 } else {
@@ -33,6 +35,8 @@ public static boolean onAlg(int num) {
     }
     return true;
 }
+// Kontrollib kas arv jagub 2, 3, 5 või 7-ga. Juhul kui ta seda ei tee, kuvatakse vastav teavitus.
+
 public static void kasJagub(int num) {
         if (num % 2 == 0) {
             System.out.println("Sisestatud arv jagub kahega.");
@@ -46,6 +50,9 @@ public static void kasJagub(int num) {
             System.out.println("Sisestatud arv ei jagu 2, 3, 5 või 7-ga.");
     }
 }
+
+// Loob 1000 elemendi pikkuse massiivi.
+
 public static List<Integer> numbrilist = new ArrayList<>();
 public static List<Integer> lisaNumbrid() {
     int num = 0;
@@ -62,6 +69,9 @@ public static List<Integer> lisaNumbrid() {
     }
     return numbrilist;
 }
+
+// Kuvab numbrilisti 10 väiksemat algarvu.
+
 public static List<Integer> alguslist = new ArrayList<>();
 public static List<Integer> algarvRuut() {
     for (int i = 0; i < 10; i++) {
@@ -71,6 +81,9 @@ public static List<Integer> algarvRuut() {
     System.out.println("10 algarvu, mille ruudud on väiksemad, kui tuhandeda algarvu ruut: " + alguslist);
     return alguslist;
 }
+
+// Kuvab tuhandenda algarvu.
+
 public static List<Integer> l6pplist = new ArrayList<>();
 public static List<Integer> algarvL6pp() {
         int length = numbrilist.size();
