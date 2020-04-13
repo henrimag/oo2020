@@ -35,13 +35,13 @@ public class App implements TicTacToe {
     public void Play() {
         boolean playing = true;
         while (playing) {
-            System.out.println("Please enter a row and column: ");
+            System.out.println("Sisesta rida ja veerg: ");
             row = scan.nextInt() - 1;
             column = scan.nextInt() - 1;
             board[row][column] = turn;
             if (GameOver(row, column)) {
                 playing = false;
-                System.out.println("Game over! Player " + turn + " wins!");
+                System.out.println("Mäng läbi! Mängija " + turn + " võitis!");
             }
             PrintBoard();
             if (turn == 'X')
@@ -63,12 +63,12 @@ public class App implements TicTacToe {
     }
 
     public boolean GameOver(int rMove, int cMove) {
-        // Check perpendicular victory
+        // Kontrollib kas reas on võitjat.
         if (board[0][cMove] == board[1][cMove] && board[0][cMove] == board[2][cMove])
             return true;
         if (board[rMove][0] == board[rMove][1] && board[rMove][0] == board[rMove][2])
             return true;
-        // Check diagonal victory
+        // Kontrollib kas diagonaalis on võitjat.
         if (board[0][0] == board[1][1] && board[0][0] == board[2][2] && board[1][1] != '_')
             return true;
         if (board[0][2] == board[1][1] && board[0][2] == board[2][0] && board[1][1] != '_')
