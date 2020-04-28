@@ -1,55 +1,20 @@
-package eu.TTT.java;
+package eu.ttt.java;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
-import org.junit.Before;
 import org.junit.Test;
 
 /**
- * Unit test for simple Tic Tac Toe App.
+ * Unit test for simple App.
  */
-public class AppTest {
-
-    private static App app;
-    private static String name;
-
+public class AppTest 
+{
     /**
      * Rigorous Test :-)
      */
-
-    @Before
-    public void initiateApp() {
-        name = "App";
-        app = new App(name);
-        App.column = 3;
-        App.row = 3;
-        // app.Play();
-    }
-
     @Test
-    public void appHasCorrectName() {
-        assertTrue("App name is App", app.getName() == name);
+    public void shouldAnswerWithTrue()
+    {
+        assertTrue( true );
     }
-
-    @Test
-    public void getMaxValueofBoard() {
-        assertEquals("Get max value of board lenght", 3, app.maxValue(App.row, App.column));
-    }
-
-
-    @Test
-
-    public void turnVariableHasValue(){
-        assertNotNull(App.turn);
-    }
-    @Test
-    public void BoardlenghtEqualsWidth() {
-        assertEquals("The board is as long as it is wide", App.row, App.column);
-    }
-
-    @Test
-    public void BoardRowLenghtIs3() {
-        assertEquals(3, App.column);
-    }
-
 }
