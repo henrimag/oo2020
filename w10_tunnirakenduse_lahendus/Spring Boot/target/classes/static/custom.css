@@ -1,0 +1,22 @@
+body {
+    background: linear-gradient(to right, rgb(255, 251, 0) , blue);
+    /*background-image: url("dog.jpg"); */
+}
+
+h1 {
+    color: rgb(148, 21, 70);
+}
+
+div {
+    background-color: aqua;
+    color: rgb(235, 15, 15);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1em;
+    justify-content: center;
+    text-align: center;
+}
+
+p {
+    background-color: rgb(20, 95, 36);
+    font-size: 1.25em;
+}

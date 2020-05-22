@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="custom.css"/>
+    <title>Inimesed</title>
+</head>
+<body>
+    <h1 th:text="${inimesed}"></h1>
+    <div th:each="inimene, inimeneStat : ${inimesed}">
+        <p th:text="${inimene.name}"></p>
+        <ul>
+            <li th:text="${inimeneStat}"></li>
+            <li th:text="${inimene.x}"></li>
+            <li th:text="${inimene.y}"></li>
+            <li th:text="${inimene.gender}"></li>
+            <li th:text="${inimene.type}"></li>
+        </ul>
+    </div>
+</body>
+</html>
